@@ -1,2 +1,3 @@
 hello world!
 Adding text.
+color was add from local
