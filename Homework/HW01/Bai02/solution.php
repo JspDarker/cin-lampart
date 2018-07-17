@@ -32,6 +32,11 @@ class PTBac2
             return;
         }
 
+        if($a == 0) {
+            echo 'Pt co dang bx + c = 0 voi nghiem la: '. (-$c/($b));
+            return;
+        }
+
         $delta = $this->delta($a, $b, $c);
         $res = $this->nghiemPT($a, $b, $c);
         if($delta < 0) {
@@ -50,7 +55,6 @@ class PTBac2
         echo "<br>Nghiem la x2 = " .$res['x2'];
         return;
     }
-
 }
 $pt = new PTBac2;
-$pt->GiaiPT(1,-8,16);
+$pt->GiaiPT(0,-8,16);
