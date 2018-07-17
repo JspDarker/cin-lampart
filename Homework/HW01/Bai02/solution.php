@@ -25,15 +25,30 @@ class PTBac2
         }
         return false;
     }
-    public function GiaiPT($a, $b, $c)
+
+    public function giaiPT($a, $b, $c)
     {
         if($this->isNumber($a, $b, $c) == false) {
             echo "params required numeric";
             return;
         }
 
+        // issue1
         if($a == 0) {
             echo 'Pt co dang bx + c = 0 voi nghiem la: '. (-$c/($b));
+            return;
+        }
+
+        // issue2
+        if($a != 0 && $b == 0){
+            $waring = (-$c)/$a;
+            if($waring < 0) {
+                echo "logic invalid!";
+                return;
+            }
+            echo "pt co 2 nghiem <br>";
+            echo "Nghiem la x1 = " .(sqrt(-$c/$a));
+            echo "<br>Nghiem la x2 = " .(-sqrt(-$c/$a));
             return;
         }
 
@@ -57,4 +72,4 @@ class PTBac2
     }
 }
 $pt = new PTBac2;
-$pt->GiaiPT(0,-8,16);
+$pt->giaiPT(6,1,5);
