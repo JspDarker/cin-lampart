@@ -1,5 +1,0 @@
-hello world!
-Adding text.
-color was add from local
-Color adding from remote
-- Great!
