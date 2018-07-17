@@ -1,0 +1,9 @@
+#// Learn GIT Stash
+
+#git stash giống như git commit nhưng không ra 1 commit mà lưu lại trạng thái đang làm việc. tiện cho việc đang làm dan dỏ mà phải làm branch cần thiết trước.
+    #cú pháp:
+        git stash save "message giống commit nhưng k đưa code len repo"
+        git stash list              # xem co nhung file nao duoc luu trong stash
+        git stash apply stash@{1}   # lay ra 1 stash bang ID {0|1|2|3}
+        git stash pop               # lay phien ban moi nhats
+

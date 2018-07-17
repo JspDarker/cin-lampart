@@ -1,0 +1,4 @@
+# git tag dùng để gán version cho 1 commit quan trọng.
+# làm cho việc kiểm tra và update chức năng được cụ thể và rõ ràng
+# có thể dùng
+    git show <version> # để truy xuất tới commit
