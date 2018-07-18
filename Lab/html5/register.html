@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+
+<form action="#" method="post">
+    <table border="1" cellpadding="5" align="center">
+        <caption><h2>Register</h2></caption>
+        <tr>
+            <td><b>Full Name</b></td>
+            <td><input name="full_name" type="text" placeholder="Enter your name"></td>
+        </tr>
+        <tr>
+            <td><b>Username</b></td>
+            <td><input name="username" type="text" placeholder="user_name123_example"></td>
+        </tr>
+        <tr>
+            <td><b>Password</b></td>
+            <td><input name="password" type="password" placeholder="tối thiểu 6 kí tự"></td>
+        </tr>
+        <tr>
+            <td><b>Retype Password</b></td>
+            <td><input name="password_retype" type="password" placeholder=""></td>
+        </tr>
+        <tr>
+            <td><b>DBO</b></td>
+            <td>
+                <select name="days">
+                    <option selected value="1">Ngày 1</option>
+                    <option value="2">Ngày 2</option>
+                    <option value="3">Ngày 3</option>
+                    <option value="4">Ngày 4</option>
+                    <option value="5">Ngày 5</option>
+                </select>
+                <select name="months">
+                    <option selected value="1">Tháng 1</option>
+                    <option value="2">Tháng 2</option>
+                    <option value="3">Tháng 3</option>
+                </select>
+                <select name="years">
+                    <option selected value="2017">Năm 2017</option>
+                    <option value="2016">Năm 2016</option>
+                    <option value="2015">Năm 2015</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Gender</b></td>
+            <td><input type="radio" name="gender" value="1"><span>Male</span>
+                <input type="radio" name="gender" value="0"><span>Female</span>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Avatar</b></td>
+            <td><input name="upload-file" type="file"> </td>
+        </tr>
+        <tr>
+            <td><b>Address</b></td>
+            <td><textarea name="address" id="address"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="checkbox" name="agree"><span>Agree with all the conditions</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit" name="submit">OKE</button>
+                <button type="reset" name="reset">Reset</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
