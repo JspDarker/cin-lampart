@@ -1,3 +1,3 @@
 # checkout      # dùng để chuyển qua lại giữa các branch
 # reset         # dùng để lùi lại những commit trước đó, có thể thay đổi cả ở working tree or
-# revert        #
+# revert        # tao ra 1 nut moi tu nut nao do
