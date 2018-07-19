@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<table border="1" width="90%" align="center">
+    <tr>
+        <td colspan="6" height="100" bgcolor="#a2b657">
+            <img src="../Bai01/logo/logo.png" alt="Logo company">
+            <cite><b><q>Creativity is limitless</q></b></cite>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6" height="30">
+            <table width="100%">
+                <tr>
+                    <th align="center"><a href="home.html" title="Home page">Trang Chủ</a></th>
+                    <th align="center"><a href="register.html" title="Register">Đăng kí</a></th>
+                    <th align="center"><a href="login.html" title="Login page">Đăng nhập</a></th>
+                    <th align="center"><a href="calendar.html" title="Calendar page">Lịch Biểu</a></th>
+                    <th align="center"><a href="products.html" title="Products Pages">Sản phẩm</a></th>
+                    <th align="center"><a href="contact.html" title="Contact Us">Liên Hệ</a></th>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr >
+        <td bgcolor="#d2d9e1"> </td>
+        <td colspan="4" width="70%" height="500">
+            <!--this content-->
+            <table border="1" cellpadding="5" align="center">
+                <caption><h2>Register</h2></caption>
+                <tr>
+                    <td><b>Full Name</b></td>
+                    <td><input name="full_name" type="text" placeholder="Enter your name"></td>
+                </tr>
+                <tr>
+                    <td><b>Username</b></td>
+                    <td><input name="username" type="text" placeholder="user_name123_example"></td>
+                </tr>
+                <tr>
+                    <td><b>Password</b></td>
+                    <td><input name="password" type="password" placeholder="tối thiểu 6 kí tự"></td>
+                </tr>
+                <tr>
+                    <td><b>Retype Password</b></td>
+                    <td><input name="password_retype" type="password" placeholder=""></td>
+                </tr>
+                <tr>
+                    <td><b>DBO</b></td>
+                    <td>
+                        <select name="days">
+                            <option selected value="1">Ngày 1</option>
+                            <option value="2">Ngày 2</option>
+                            <option value="3">Ngày 3</option>
+                            <option value="4">Ngày 4</option>
+                            <option value="5">Ngày 5</option>
+                        </select>
+                        <select name="months">
+                            <option selected value="1">Tháng 1</option>
+                            <option value="2">Tháng 2</option>
+                            <option value="3">Tháng 3</option>
+                        </select>
+                        <select name="years">
+                            <option selected value="2017">Năm 2017</option>
+                            <option value="2016">Năm 2016</option>
+                            <option value="2015">Năm 2015</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Gender</b></td>
+                    <td><input type="radio" name="gender" value="1"><span>Male</span>
+                        <input type="radio" name="gender" value="0"><span>Female</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Avatar</b></td>
+                    <td><input name="upload-file" type="file"> </td>
+                </tr>
+                <tr>
+                    <td><b>Address</b></td>
+                    <td><textarea name="address" id="address"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="checkbox" name="agree"><span>Agree with all the conditions</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit" name="submit">OKE</button>
+                        <button type="reset" name="reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+            <!--this content-->
+        </td>
+        <td bgcolor="#d2d9e1"> </td>
+    </tr>
+    <tr>
+        <td colspan="6" height="60" bgcolor="#a2b657" align="center">
+            <b>Copyright © 2017 Lampart Co., Ltd. All Rights Reserved.</b>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
