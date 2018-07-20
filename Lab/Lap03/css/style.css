@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing : border-box;
 }
+a {
+    text-decoration: none;
+
+}
 .container {
     font-size: 16px;
     font-family: "Times New Roman", Times, serif;
@@ -21,7 +25,7 @@ header b {color: #9f511b}
 
 #main-content {
     display: flex;
-    height: 400px;
+    /*min-height: 400px;*/
     padding-bottom: 5px;
 }
 
@@ -31,10 +35,22 @@ header b {color: #9f511b}
     margin-right: 5px;
 }
 
+/* flex container items products ---------IMPORTANT---------- */
 #middle-strong {
     background-color: #ccc;
     width: 60%;
-}
+    display: flex; /*flex container items*/
+
+    /* items con tu roi xuong */
+    flex-wrap: wrap;
+
+    /*roi tu trai qua phai | no space bigger between giua 2 line*/
+    align-content: flex-start;
+
+
+    /*flex-direction: row;*/
+    /*flex-flow: row;*/
+} /*-----------IMPORTANT-----------------/. flex container items products */
 
 #right-side {
     width: 20%;
@@ -50,5 +66,43 @@ footer {
 }
 
 /* 2. Menu 1 cấp */
+nav#nav-header ul li {
+    float: left;
+    list-style-type: none;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    border-right: red dotted 1px;
+}
 
+nav#nav-header ul li:last-child {
+    border: none;
+}
 
+nav#nav-header ul li a {
+    display: block;
+    width: 100%;
+}
+
+/* list items product */
+article#middle-strong .items-sp {
+    width: 24%;
+    height: 280px;
+    margin: 0.5%;
+    text-align: center;
+    padding: 2%;
+    border: solid blue 1px;
+}
+
+article#middle-strong .items-sp img {
+    width: 80%;
+}
+article#middle-strong .items-sp button {
+    padding: 3px;
+    margin-bottom: 3px;
+}
+
+article#middle-strong .items-sp h5 {
+    color: red;
+}
