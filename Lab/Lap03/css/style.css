@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing : border-box;
+}
+.container {
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    padding: 0 5px;
+}
+header {
+    background: #a1b556;
+    height: 80px;
+}
+header b {color: #9f511b}
+#nav-header {
+    height: 30px;
+    background: #ccff9a;
+    margin: 5px 0;
+}
+
+#main-content {
+    display: flex;
+    height: 400px;
+    padding-bottom: 5px;
+}
+
+#left-side {
+    width: 20%;
+    background: #99ff99;
+    margin-right: 5px;
+}
+
+#middle-strong {
+    background-color: #ccc;
+    width: 60%;
+}
+
+#right-side {
+    width: 20%;
+    background: #99ff99;
+    margin-left: 5px;
+}
+
+footer {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background-color: #7d8f3d;
+}
+
+/* 2. Menu 1 cấp */
+
+
