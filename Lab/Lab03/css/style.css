@@ -14,7 +14,7 @@ a {
 }
 header {
     background: #a1b556;
-    height: 80px;
+    height: 100px;
 }
 header b {color: #9f511b}
 #nav-header {
@@ -59,10 +59,11 @@ header b {color: #9f511b}
 }
 
 footer {
-    text-align: center;
-    height: 60px;
-    line-height: 60px;
     background-color: #7d8f3d;
+    display: flex;
+    justify-content: space-around; /*Khoang trang nam xug quanh chu*/
+    text-align: center;
+    padding: 40px;
 }
 
 /* 2. Menu 1 cấp */
@@ -73,9 +74,10 @@ nav#nav-header ul li {
     width: 100px;
     text-align: center;
     line-height: 30px;
+}
+nav#nav-header > ul > li{
     border-right: red dotted 1px;
 }
-
 nav#nav-header ul li:last-child {
     border: none;
 }
@@ -89,21 +91,147 @@ nav#nav-header ul li a {
     /* IMPORTANT BOX-MODAL  */
 article#middle-strong .items-sp {
     width: 24%;
-    height: 280px;
     margin: 0.5%;
     text-align: center;
-    padding: 2%;
     border: solid blue 1px;
+}
+article#middle-strong .items-sp h4 {
+    height: 40px;
+    padding: 5px;
+    line-height: 40px;
+    text-overflow: ellipsis; /*process text longer*/
+    overflow: hidden; /*process text longer*/
+    white-space: nowrap; /*process text longer*/
 }
 
 article#middle-strong .items-sp img {
-    width: 80%;
+    max-width: 100%;
 }
+
+
 article#middle-strong .items-sp button {
-    padding: 3px;
-    margin-bottom: 3px;
+    padding: 5px 10px;
+    margin:5px 0 5px 0;
 }
 
 article#middle-strong .items-sp h5 {
     color: red;
+}
+
+/*==RESPONSIVE==*/
+
+@media screen and (min-width: 1000px) {
+    #nav-header button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1000px) { /*and(min-width: 760px) */
+    #nav-header button {
+        display: none;
+    }
+    #right-side {
+        display: none;
+    }
+
+    #left-side {
+        width: 25%;
+    }
+
+    #middle-strong {
+        width: 75%;
+    }
+
+    article#middle-strong .items-sp {
+        width: 32.333%;
+    }
+
+}
+
+@media screen /*and (min-width: 481px) */and (max-width: 768px) {
+    #left-side {
+        display: block !important;
+        width: 100%;
+        min-height: 60px;
+        margin-bottom: 5px;
+    }
+
+    #nav-header > ul {
+        display: none;
+    }
+
+    .bars-custom {
+        text-align: center;
+        border: 1px solid #ddd;
+        color: black;
+        font-size: 25px;
+        height: 100%;
+        background-color: #dfdee7;
+        cursor:pointer;
+    }
+
+    #middle-strong {
+        width: 100%;
+    }
+
+    #right-side {
+        display: none;
+    }
+
+    #main-content {
+
+        display: block;
+    }
+
+    article#middle-strong .items-sp {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 480px){ /*flag done fix*/
+    article#middle-strong .items-sp {
+        width: 100%;
+    }
+}
+/*==/. RESPONSIVE==*/
+
+/*==Menu Multi level==*/
+#nav-header > ul > li {
+    position: relative;
+}
+#nav-header > ul > li:hover {
+    background-color: #eee;
+}
+#nav-header > ul > li > ul{
+    position: absolute;
+    z-index: 9999;
+    background-color: #9df8cc;
+}
+#nav-header > ul > li > ul li {
+    min-width: 150px;
+    border-bottom: 1px solid #ccc;
+}
+
+#nav-header > ul > li > ul li:hover > a {
+    /*background: #7d8f3d;*/
+    text-decoration: underline;
+    color: red;
+}
+#nav-header > ul > li > ul > li { position: relative}
+#nav-header > ul > li > ul > li > ul {
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: #f6f5a5;
+}
+
+.level1, .level2 {
+    display: none;
+}
+
+#nav-header > ul > li:hover .level1 {
+    display: block;
+}
+#nav-header > ul > li > ul > li:hover .level2 {
+    display: block;
 }
