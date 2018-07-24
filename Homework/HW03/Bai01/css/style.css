@@ -5,7 +5,6 @@
 }
 a {
     text-decoration: none;
-
 }
 .container {
     font-size: 16px;
@@ -22,40 +21,36 @@ header b {color: #9f511b}
     background: #ccff9a;
     margin: 5px 0;
 }
-
+#nav-header > ul {
+    display: none;
+}
 #main-content {
-    display: flex;
-    /*min-height: 400px;*/
     padding-bottom: 5px;
 }
 
 #left-side {
-    width: 20%;
+
     background: #99ff99;
     margin-right: 5px;
+    width:  100%;
+    display:  block;
+    min-height:  60px;
 }
 
 /* flex container items products ---------IMPORTANT---------- */
 #middle-strong {
     background-color: #ccc;
-    width: 60%;
-    display: flex; /*flex container items*/
-
-    /* items con tu roi xuong */
+    display: flex;
     flex-wrap: wrap;
-
-    /*roi tu trai qua phai | no space bigger between giua 2 line*/
-    align-content: flex-start;
-
-
-    /*flex-direction: row;*/
-    /*flex-flow: row;*/
+    width: 100%;
+    align-content:  center;
 } /*-----------IMPORTANT-----------------/. flex container items products */
 
 #right-side {
-    width: 20%;
-    background: #99ff99;
-    margin-left: 5px;
+     width: 20%;
+     background: #99ff99;
+     margin-left: 5px;
+    display:  none;
 }
 
 footer {
@@ -88,27 +83,22 @@ nav#nav-header ul li a {
 }
 
 /* list items product */
-    /* IMPORTANT BOX-MODAL  */
+/* IMPORTANT BOX-MODAL  */
 article#middle-strong .items-sp {
-    width: 24%;
     margin: 0.5%;
     text-align: center;
     border: solid blue 1px;
 }
-article#middle-strong .items-sp h4 {
-    height: 40px;
-    padding: 5px;
-    line-height: 40px;
-    text-overflow: ellipsis; /*process text longer*/
-    overflow: hidden; /*process text longer*/
-    white-space: nowrap; /*process text longer*/
+
+.items-sp h4 {
+    display: flex;
+    justify-content: space-around; /*Khoang trang nam xug quanh chu*/
+    text-align: center;
+    padding: 10px;
 }
 
 article#middle-strong .items-sp img {
     max-width: 100%;
-    /* height: 100000px; */
-    /* height:  100px; */
-    /* height: 1px; */
 }
 
 
@@ -116,54 +106,7 @@ article#middle-strong .items-sp button {
     padding: 5px 10px;
     margin:5px 0 5px 0;
 }
-
-article#middle-strong .items-sp h5 {
-    color: red;
-}
-
-/*==RESPONSIVE==*/
-
-@media screen and (min-width: 1000px) {
-    #nav-header button {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1000px) { /*and(min-width: 760px) */
-    #nav-header button {
-        display: none;
-    }
-    #right-side {
-        display: none;
-    }
-
-    #left-side {
-        width: 25%;
-    }
-
-    #middle-strong {
-        width: 75%;
-    }
-
-    article#middle-strong .items-sp {
-        width: 32.333%;
-    }
-
-}
-
-@media screen /*and (min-width: 481px) */and (max-width: 768px) {
-    #left-side {
-        display: block !important;
-        width: 100%;
-        min-height: 60px;
-        margin-bottom: 5px;
-    }
-
-    #nav-header > ul {
-        display: none;
-    }
-
-    .bars-custom {
+.bars-custom {
         text-align: center;
         border: 1px solid #ddd;
         color: black;
@@ -172,31 +115,108 @@ article#middle-strong .items-sp h5 {
         background-color: #dfdee7;
         cursor:pointer;
     }
+article#middle-strong .items-sp h5 {
+    color: red;
+}
 
-    #middle-strong {
-        width: 100%;
-    }
+/*==RESPONSIVE==*/
 
-    #right-side {
-        display: none;
-    }
-
-    #main-content {
-
-        display: block;
-    }
-
+@media screen and (min-width: 460px) and (max-width: 768px) {
     article#middle-strong .items-sp {
         width: 49%;
     }
-}
 
-@media screen and (max-width: 480px){ /*flag done fix*/
-    article#middle-strong .items-sp {
-        width: 100%;
+    article#middle-strong .items-sp h4 {
+    height: 40px;
+    padding: 5px;
+    line-height: 40px;
+    text-overflow: ellipsis; /*process text longer*/
+    overflow: hidden; /*process text longer*/
+    white-space: nowrap; /*process text longer*/
+        display: block;
     }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    article#middle-strong .items-sp {
+        width: 32.33%;
+    }
+
+    article#middle-strong .items-sp h4 {
+        height: 40px;
+        padding: 5px;
+        line-height: 40px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block;
+    }
+    #left-side {
+         width: 25%;
+    }
+
+    article#middle-strong {
+        width: 75%;
+    }
+
+    #main-content {
+         display: flex;
+        /*min-height: 400px;*/
+        padding-bottom: 5px;
+    }
+
+    #nav-header > ul {
+        display: block;
+    }
+    nav#nav-header > button {
+        display: none ;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    article#middle-strong .items-sp {
+        width: 24%;
+    }
+
+    #main-content {
+        display: flex;
+        padding-bottom: 5px;
+    }
+
+    #left-side {
+        width: 20%;
+        display: initial; /*bo cai hien tai*/
+    }
+
+    article#middle-strong {
+        width: 60%;
+    }
+
+    #right-side {
+        display: block !important;
+    }
+
+    #nav-header > ul {
+        display: block;
+    }
+    nav#nav-header > button {
+        display: none ;
+    }
+
+    article#middle-strong .items-sp h4 {
+        height: 40px;
+        padding: 5px;
+        line-height: 40px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block;
+    }
+
+}
 /*==/. RESPONSIVE==*/
+
+
 
 /*==Menu Multi level==*/
 #nav-header > ul > li {
