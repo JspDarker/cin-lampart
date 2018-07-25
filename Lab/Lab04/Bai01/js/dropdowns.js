@@ -1,6 +1,7 @@
 $(function() {
     let $menu_list = $('#nav-header > ul');
     let $button = $('#dropdowns');
+
     $button.on('click', displayMenu);
 
     function displayMenu() {
