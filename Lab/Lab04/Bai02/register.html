@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 <body>
 <table border="1" width="90%" align="center">
     <tr>
         <td colspan="6" height="100" bgcolor="#a2b657">
-            <img src="../Bai01/logo/logo.png" alt="Logo company">
+            <!--<img src="../Bai01/logo/logo.png" alt="Logo company">-->
             <cite><b><q>Creativity is limitless</q></b></cite>
         </td>
     </tr>
@@ -30,73 +31,76 @@
         <td bgcolor="#d2d9e1"> </td>
         <td colspan="4" width="70%" height="500">
             <!--this content-->
-            <table border="1" cellpadding="5" align="center">
-                <caption><h2>Đăng Ký</h2></caption>
-                <tr>
-                    <td align="center"><b>Full name</b></td>
-                    <td><input name="full_name" type="text" placeholder="Nhập họ tên"></td>
-                </tr>
-                <tr>
-                    <td align="center"><b>Username</b></td>
-                    <td><input name="username" type="text" placeholder="test"></td>
-                </tr>
-                <tr>
-                    <td align="center"><b>Password</b></td>
-                    <td><input name="password" type="password" placeholder="tối thiểu 6 kí tự"></td>
-                </tr>
-                <tr>
-                    <td align="center"><b>Retype Password</b></td>
-                    <td><input name="password_retype" type="password" placeholder=""></td>
-                </tr>
-                <tr>
-                    <td align="center"><b>DBO</b></td>
-                    <td>
-                        <select name="days">
-                            <option selected value="1">Ngày 1</option>
-                            <option value="2">Ngày 2</option>
-                            <option value="3">Ngày 3</option>
-                            <option value="4">Ngày 4</option>
-                            <option value="5">Ngày 5</option>
-                        </select><span> - </span>
-                        <select name="months">
-                            <option selected value="1">Tháng 1</option>
-                            <option value="2">Tháng 2</option>
-                            <option value="3">Tháng 3</option>
-                        </select><span> - </span>
-                        <select name="years">
-                            <option selected value="2017">Năm 2017</option>
-                            <option value="2016">Năm 2016</option>
-                            <option value="2015">Năm 2015</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center"><b>Gender</b></td>
-                    <td><input type="radio" name="gender" value="1"><span>Male</span>
-                        <input type="radio" name="gender" value="0"><span>Female</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center"><b>Avatar</b></td>
-                    <td><input name="upload-file" type="file"> </td>
-                </tr>
-                <tr>
-                    <td align="center"><b>Address</b></td>
-                    <td><textarea name="address" id="address" cols="50" rows="4"></textarea></td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center">
-                        <input type="checkbox" name="agree"><span><b>Agree with all the conditions</b></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center">
-                        <button type="submit" name="submit">OK</button>
-                        <button type="reset" name="reset">Reset</button>
-                    </td>
-                </tr>
-            </table>
-            <!--this content-->
+            <form id="main-form" action="#" method="post">
+                <table border="1" cellpadding="5" align="center">
+                    <caption><h2>Đăng Ký</h2></caption>
+                    <tr>
+                        <td align="center"><b>Full name</b></td>
+                        <td><input id="fname" name="full_name" type="text" placeholder="Nhập họ tên"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>Username</b></td>
+                        <td><input id="username" name="username" type="text" placeholder="test"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>Password</b></td>
+                        <td><input id="password" name="password" type="password" placeholder="tối thiểu 6 kí tự"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>Retype Password</b></td>
+                        <td><input id="password_retype" name="password_retype" type="password" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>DBO</b></td>
+                        <td>
+                            <select id="days" name="days">
+                                <option selected value="1">Ngày 1</option>
+                                <option value="2">Ngày 2</option>
+                                <option value="3">Ngày 3</option>
+                                <option value="4">Ngày 4</option>
+                                <option value="5">Ngày 5</option>
+                            </select><span> - </span>
+                            <select id="months" name="months">
+                                <option selected value="1">Tháng 1</option>
+                                <option value="2">Tháng 2</option>
+                                <option value="3">Tháng 3</option>
+                            </select><span> - </span>
+                            <select id="years" name="years">
+                                <option selected value="2017">Năm 2017</option>
+                                <option value="2016">Năm 2016</option>
+                                <option value="2015">Năm 2015</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>Gender</b></td>
+                        <td><input id="male" class="check-radio" type="radio" name="gender" value="1"><span>Male</span>
+                            <input id="female" class="check-radio" type="radio" name="gender" value="0"><span>Female</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>Avatar</b></td>
+                        <td><input name="upload-file" type="file"> </td>
+                    </tr>
+                    <tr>
+                        <td align="center"><b>Address</b></td>
+                        <td><textarea name="address" id="address" cols="50" rows="4"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="checkbox" name="agree"><span><b>Agree with all the conditions</b></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button type="submit" name="submit">Register</button>
+                            <button type="reset" name="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+                <!--this content-->
+            </form>
+
         </td>
         <td bgcolor="#d2d9e1"> </td>
     </tr>
@@ -106,5 +110,7 @@
         </td>
     </tr>
 </table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/valid.js"></script>
 </body>
 </html>
