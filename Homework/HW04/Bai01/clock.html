@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@Clock</title>
+</head>
+<body>
+<div class="container" style="text-align: center">
+    <h1 id="clock">Delay after input seconds</h1>
+    <h2 id="clockjs">Sẽ chuyển đến Google sau: </h2>
+    <label for="second"><b>Nhap Seconds </b></label>
+    <input type="text" id="second" placeholder="Enter Seconds">
+    <button onclick="goLampart()">Click Start</button>
+</div>
+
+<script>
+    let second = document.getElementById('second');
+    let seconds = second.value;
+    function goLampart() {
+        let second = document.getElementById('second');
+        let seconds = second.value;
+        if(seconds ==="") {
+            alert("Bạn phải nhập giây!");
+            return false;
+        }
+        let interval = setInterval(function(){
+            document.getElementById("clockjs").innerHTML = "Sẽ chuyển đến Google sau "+ "<span style='color: red'>"+fancyTimeFormat(--seconds)+ "</span>"+ " giây.";
+            if (seconds === 0){
+                clearInterval(interval);
+                window.location.href = "https://google.com.vn";
+            }
+
+        }, 1000);
+    }
+
+    function fancyTimeFormat(time)
+    {
+        // Hours, minutes and seconds
+        let hrs = Math.floor(time / 3600);
+        let mins = Math.floor((time % 3600) / 60);
+        let secs = Math.floor(time % 60);
+
+        let ret = "";
+        if (hrs > 0) {
+            ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+        }
+        ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+        ret += "" + secs;
+        return ret;
+    }
+</script>
+</body>
+</html>
