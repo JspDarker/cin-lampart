@@ -1,12 +1,14 @@
 // Declaration variables
-let name = document.getElementById('name');
-let btn = document.getElementById('add');
-let parent =document.getElementById('list-name');
-let select = parent.querySelectorAll("option");
+
 //console.log(select[2].value);
 
 // Add Event
+let btn = document.getElementById('add');
 btn.addEventListener('click',function() {
+    let name = document.getElementById('name');
+    let parent =document.getElementById('list-name');
+    let select = parent.querySelectorAll("option");
+
     let names = name.value;
     // check empty field
     if(names.trim() ==="") {
@@ -29,5 +31,6 @@ btn.addEventListener('click',function() {
 
     // insert into Element parent
     parent.insertBefore(newItems, parent.childNodes[0]);
+
 });
 

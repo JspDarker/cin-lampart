@@ -7,6 +7,45 @@
 <body>
 <h1>Welcome: Add List Client</h1>
 <div>
+    <script>
+        /*(setInterval();
+            window.onload = function() {
+
+            // Handler when all assets (including images) are loaded
+            // Declaration variables
+            let name = document.getElementById('name');
+            let btn = document.getElementById('add');
+            let parent =document.getElementById('list-name');
+            let select = parent.querySelectorAll("option");
+            //console.log(select[2].value);
+
+            // Add Event
+            btn.addEventListener('click',function() {
+                let names = name.value;
+                // check empty field
+                if(names.trim() ==="") {
+                    alert("Bạn phải nhập họ tên");
+                    return false;
+                }
+
+                // check same field
+                for(let i in select) {
+                    if(names === select[i].value) {
+                        alert("Họ tên bị trùng");
+                        return false;
+                    }
+                }
+                // create Element child
+                let newItems = document.createElement("OPTION");
+                let textNode = document.createTextNode(names);
+                newItems.appendChild(textNode);
+                newItems.value = names;
+
+                // insert into Element parent
+                parent.insertBefore(newItems, parent.childNodes[0]);
+            });
+        })();*/
+    </script>
     <label for="name">
         <input type="text" id="name" placeholder="Nhập họ tên">
         <button id="add" type="button">Add</button>
@@ -21,7 +60,7 @@
         </select>
     </div>
 </div>
-<script src="js/lists.js"> </script>
+<script src="js/lists.js"></script>
 
 </body>
 </html>
