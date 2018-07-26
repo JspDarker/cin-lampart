@@ -1,10 +1,10 @@
-// Declaration variables
 
-//console.log(select[2].value);
 
-// Add Event
+
 let btn = document.getElementById('add');
+// Add Event
 btn.addEventListener('click',function() {
+    // Declaration variables
     let name = document.getElementById('name');
     let parent =document.getElementById('list-name');
     let select = parent.querySelectorAll("option");

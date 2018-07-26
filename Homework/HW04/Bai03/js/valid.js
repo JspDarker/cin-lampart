@@ -10,6 +10,10 @@ $(function() {
     let password = $('#password');
     let password_retype = $('#password_retype');
 
+
+
+
+
     function checkPass(password) {
         let pass = password.val();
         if(pass.length <6) {
@@ -25,8 +29,15 @@ $(function() {
 
             let arr_str = stringRequire.split("");
 
+            let flag_valid = false;
             for (let a in arr_str) {
                 console.log(arr_str[a]);
+                let ch = arr_str[a];
+                if (pass.indexOf(ch) >= 0) {
+                    flag_valid = true;
+                    break;
+                }
+            }
                 //var str = "Hello world, welcome to the universe.";
                 //var n = str.includes("world");
                 // let res = pass.includes(arr_str[a]);
@@ -37,7 +48,9 @@ $(function() {
                 //     console.log(res);
                 //     return false;
                 // }
-            }
+            //}
+
+
 
 
 
@@ -53,15 +66,6 @@ $(function() {
             //         console.log(str_includes);
             //     }
             // }
-
-
-
-
-
-            function checkOneCharExist() {
-
-            }
-
             return false;
 
         }
@@ -77,9 +81,13 @@ $(function() {
 
     }
     function checkForm() {
-        if(fullname.val() ==="" || username.val() === "") {
+        if(fullname.val() ==="") {
             console.log("required");
+            let nameErr = "tên không được để trống";
+            fullname.insertAfter(`<span class="error">${nameErr}</span>`);
             return false;
+        } else {
+            //fullname.re
         }
         if(checkPass(password) !== true) {
             return false;

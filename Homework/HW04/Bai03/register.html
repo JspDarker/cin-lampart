@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Registration</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <style>
+        span.error {
+            display: block;
+            color :red;
+        }
+    </style>
 </head>
 <body>
 <table border="1" width="90%" align="center">
@@ -36,19 +42,29 @@
                     <caption><h2>Đăng Ký</h2></caption>
                     <tr>
                         <td align="center"><b>Full name</b></td>
-                        <td><input value="123" id="fname" name="full_name" type="text" placeholder="Nhập họ tên"></td>
+                        <td>
+                            <input id="fname" name="full_name" type="text" placeholder="Nhập họ tên">
+                            <span class="error" id="nameErr"></span>
+                        </td>
                     </tr>
                     <tr>
-                        <td align="center"><b>Username</b></td>
-                        <td><input value="123" id="username" name="username" type="text" placeholder="test"></td>
+                        <td align="center"><b>Email</b></td>
+                        <td><input id="email" name="email" type="text" placeholder="email">
+                            <span class="error" id="emailErr">1111</span>
+                        </td>
+
                     </tr>
                     <tr>
                         <td align="center"><b>Password</b></td>
-                        <td><input id="password" name="password" type="password" placeholder="tối thiểu 6 kí tự"></td>
+                        <td><input id="password" name="password" type="password" placeholder="tối thiểu 6 kí tự">
+                            <span class="error" id="passErr">1111</span>
+                        </td>
                     </tr>
                     <tr>
                         <td align="center"><b>Retype Password</b></td>
-                        <td><input id="password_retype" name="password_retype" type="password" placeholder=""></td>
+                        <td><input id="password_retype" name="password_retype" type="password" placeholder="">
+                            <span class="error" id="passConf_Err">1111</span>
+                        </td>
                     </tr>
                     <tr>
                         <td align="center"><b>DBO</b></td>
@@ -76,6 +92,8 @@
                         <td align="center"><b>Gender</b></td>
                         <td><input id="male" class="check-radio" type="radio" name="gender" value="1"><span>Male</span>
                             <input id="female" class="check-radio" type="radio" name="gender" value="0"><span>Female</span>
+                            <span class="error" id="genderErr">1111</span>
+
                         </td>
                     </tr>
                     <tr>
@@ -111,6 +129,6 @@
     </tr>
 </table>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/valid.js"></script>
+<script src="js/validation.js"></script>
 </body>
 </html>
