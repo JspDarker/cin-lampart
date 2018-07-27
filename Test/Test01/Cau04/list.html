@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>LAMPART - EDU</title>
+<style>
+	select{
+		width:250px;
+		height:150px;
+	}
+	input[type="button"]{
+		width:30px;
+		margin-top:5px;
+	}
+</style>
+</head>
+
+<body>
+    <table width="400" border="0" cellpadding="5" align="center">
+    <caption>LAMPART EDUCATION TEST 01</caption>
+      <tr>
+        <td width="140">
+            <select name="from" size="10" id="from" multiple>
+                <option value="1">Nguyen Quoc Dinh</option>
+                <option selected value="2">Huynh Quang Phuc</option>
+                <option value="3">Nguyen Thanh Dat</option>
+                <option value="4">Truong Van Quy</option>
+                <option value="5">Tran Thi Tuong Vi</option>
+                <option value="6">Ho Quang Dung</option>
+            </select>
+        </td>
+        <td width="72" align="center">
+            <p>
+                <input type="button" name="add-all" id="add-all" value="&gt;&gt;">
+                <input type="button" name="add" id="add" value="&gt;">
+            </p>
+            <p>
+                    <input type="button" name="del" id="del" value="&lt;">
+                    <input type="button" name="del-all" id="del-all" value="&lt;&lt;">
+            </p>
+        </td>
+        <td width="142">
+            <select name="to" size="10" id="to" multiple>
+            </select>
+        </td>
+      </tr>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="addList.js"></script>
+</body>
+</html>
