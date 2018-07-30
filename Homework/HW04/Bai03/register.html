@@ -5,10 +5,16 @@
     <title>Registration</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <style>
-        span.error {
-            display: block;
+
+        .error {
+            display: none;
             color :red;
         }
+
+        .show-error {
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -50,20 +56,20 @@
                     <tr>
                         <td align="center"><b>Email</b></td>
                         <td><input id="email" name="email" type="text" placeholder="email">
-                            <span class="error" id="emailErr">1111</span>
+                            <span class="error" id="emailErr"></span>
                         </td>
 
                     </tr>
                     <tr>
                         <td align="center"><b>Password</b></td>
                         <td><input id="password" name="password" type="password" placeholder="tối thiểu 6 kí tự">
-                            <span class="error" id="passErr">1111</span>
+                            <span class="error" id="passErr"></span>
                         </td>
                     </tr>
                     <tr>
                         <td align="center"><b>Retype Password</b></td>
                         <td><input id="password_retype" name="password_retype" type="password" placeholder="">
-                            <span class="error" id="passConf_Err">1111</span>
+                            <span class="error" id="passConf_Err"></span>
                         </td>
                     </tr>
                     <tr>
@@ -111,7 +117,7 @@
                     </tr>
                     <tr>
                         <td colspan="2" align="center">
-                            <button type="submit" name="submit">Register</button>
+                            <button id="btnPrimary" type="submit" name="submit">Register</button>
                             <button type="reset" name="reset">Reset</button>
                         </td>
                     </tr>
@@ -128,7 +134,8 @@
         </td>
     </tr>
 </table>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="js/jquery-3.3.1.js"></script>
 <script src="js/validation.js"></script>
 </body>
 </html>
