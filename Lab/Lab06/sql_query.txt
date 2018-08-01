@@ -1,0 +1,101 @@
+#1 SELECT id, name, price FROM fs_product where price >=10000000 and price <= 20000000;
+
+#2
+select `name`,
+	case
+		when `active` = 0 then "ẩn"
+        else "hiện"
+    end as active
+from fs_category;
+
+#3
+select `name`, `price` from fs_product where id in (1,5,8,20)
+
+#4
+select id, `name`, `price` from fs_product where `name` like "L%"
+
+#5
+select id, `name`, `price`, `view`
+from fs_product
+order by `view` desc
+limit 10
+;
+
+#6
+select count(product_id) as count_img
+from fs_product_img
+where `product_id` = 1
+;
+
+#7
+select p.id, p.`name`
+from fs_product p
+	left join fs_product_img img
+    on p.id = img.product_id
+where p.id != img.product_id
+;
+
+#8
+select c.id, c.`name`,count(p.category_id) as product
+from fs_category c
+	join fs_product p
+    on c.id = p.category_id
+group by c.id
+having count(p.category_id) >= 5
+;
+
+#9
+select count(1) as desc_null
+from fs_product
+where `desc` is null
+;
+
+#10
+select max(`price`) as max_price
+from fs_product
+;
+
+#11
+select sum(`price`) as price_total
+from fs_product
+;
+
+#12
+select count(img.id) as all_img
+from fs_product p
+	join fs_product_img img
+    on p.id = img.product_id
+where p.category_id = 1
+group by(p.category_id)
+;
+
+#13
+select  c.`name`,img.url, p.`desc` from fs_category c
+join fs_product p
+on c.id = p.category_id
+join fs_product_img img
+on p.id = img.product_id
+where c.`name` = "Laptop"
+;
+
+
+#14
+select c.`id`,c.`name`
+from fs_category c
+join fs_product p
+on c.id = p.category_id
+where p.id = 1
+
+#15
+select c.`id`,c.`name`
+from fs_category c
+join fs_product p
+on c.id = p.category_id
+where p.category_id is not null
+group by c.id
+
+
+#16
+select p.`name`, p.`price`
+from fs_product p
+where p.id not in (select product_id from fs_order_detail)
