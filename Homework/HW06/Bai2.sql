@@ -19,9 +19,9 @@ from departments d
 -- cau 4
 select d.location_id as location_id, d.name as department_name, l.street_address, l.city, l.state_province, c.name as country_name
 	from departments d
-	join locations l
+	left join locations l
 	on d.location_id = l.id
-	join countries c
+	left join countries c
 	on c.id = l.country_id
 ;
 
@@ -55,10 +55,10 @@ where id > (
 	where last_name = "Jones"
 );
 
--- cau 8:
+-- cau 8: count la k dem null 
 select departments.name, count(employees.id) as `number of employees`
 from departments
-join employees
+left join employees
 on departments.id = employees.department_id
 group by departments.id;
 
@@ -124,7 +124,18 @@ from employees
 	on employees.department_id = departments.id
 where employees.manager_id is not null
 	and timestampdiff(YEAR,employees.hire_date,curdate()) > 15
+; -- fix
+select
+	departments.name as `department name`,
+	concat(employees.first_name,' ',employees.last_name) as `employee name`,
+	employees.hire_date as `hire date`, employees.salary as salary
+from employees
+	join departments
+	on departments.manager_id = employees.id
+where
+timestampdiff(YEAR,employees.hire_date,curdate()) > 15
 ;
+-- ---------------------------------------
 -- cau15:
     select
     	concat(first_name,' ',last_name) as `employee name`, salary
