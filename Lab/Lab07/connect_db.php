@@ -1,9 +1,9 @@
 <?php
 error_reporting(E_ALL);
 $servername = "localhost";
-$username = "nhatthanh";
-$password = "zxcv";
-$dbname = "pro_shop";
+$username = "edu_thanh";
+$password = "edu_thanh";
+$dbname = "edu_thanh";
 // Create connection
 $conn = new mysqli($servername, $username, $password,$dbname);
 $conn->set_charset('utf8');
@@ -16,14 +16,13 @@ if ($conn->connect_error) {
 // select 1
 function getRows ($conn, $sql) {
     $res = $conn->query($sql);
-    if($res->num_rows > 0) {
+    if($res) {
         $arr = array();
         while($rows = $res->fetch_assoc()) {
             $arr[] = $rows;
         }
         return $arr;
     }
-    return false;
 }
 
 // optgroup | select
