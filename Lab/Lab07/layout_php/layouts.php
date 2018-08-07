@@ -70,41 +70,6 @@ require_once "../connect_db.php";
                     <button>Mua</button>
                 </div>
                 <?php endforeach ?>
-                <!--<div class="items-sp">
-                    <h4>iPhone 8 Plus 64GB</h4>
-                    <img src="images/iPhone8.png" alt="Iphone X 999GB Gold">
-                    <h5>12,000,000 VND</h5>
-                    <button>Mua</button>
-                </div>
-
-                <div class="items-sp">
-                    <h4>Ten SP</h4>
-                    <img src="images/iPhone8.png" alt="Iphone X 999GB Gold">
-                    <h5>12,000,000 VND</h5>
-                    <button>Mua</button>
-                </div>
-
-                <div class="items-sp">
-                    <h4>Ten SP</h4>
-                    <img src="images/iPhone8.png" alt="Iphone X 999GB Gold">
-                    <h5>12,000,000 VND</h5>
-                    <button>Mua</button>
-                </div>
-
-                <div class="items-sp">
-                    <h4>Ten SP</h4>
-                    <img src="images/iPhone8.png" alt="Iphone X 999GB Gold">
-                    <h5>12,000,000 VND</h5>
-                    <button>Mua</button>
-                </div>
-
-                <div class="items-sp">
-                    <h4>iPhone 8 Plus Red 64GB (Đỏ)</h4>
-                    <img src="images/iPhone8.png" alt="Iphone X 999GB Gold">
-                    <h5>12,000,000 VND</h5>
-                    <button>Mua</button>
-                </div>-->
-
             </article>
             <!-- /.article -->
 

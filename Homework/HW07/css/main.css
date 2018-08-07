@@ -1,0 +1,289 @@
+*
+{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+body
+{
+	margin:5px;
+}
+#wrapper
+{
+	width:100%;
+}
+#header
+{
+	height:100px;
+	width:100%;
+	background-color:#a2b657;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+}
+#header .slogan
+{
+	position:relative;
+	top:30px;
+	font-size: 20px;
+    color: #a50a0a;
+    font-style: italic;
+    white-space:pre;
+}
+#menu
+{
+	height:40px;
+	background-color:#CF9;
+	margin:5px 0px;
+	/**/
+	position: sticky;
+	top: 0;
+}
+
+.flex-main {
+	display: flex;
+}
+#left,#right
+{
+	/*float:left;*/
+	min-height:450px;
+	background-color:#9F9;
+	width:19.5%;
+	margin-bottom:5px;
+}
+#main
+{
+	/*float:left;*/
+	min-height:450px;
+	background-color:#CCC;
+	width:60%;
+	margin:0px 0.5%;
+	margin-bottom:5px;
+}
+#footer
+{
+	/*clear:both;*/
+	height:80px;
+	background-color:#7d8e3d;
+	line-height:80px;
+	vertical-align:middle;
+	font-weight:bold;
+	font-size:18px;
+	text-align:center;
+}
+
+#main .product
+{
+	width:23%;
+	border:1px solid blue;
+	margin:5px 1%;
+	text-align:center;
+	float:left;
+	padding:5px;
+	border-radius:5px;
+	transition:all 1s 0s linear;
+}
+#main .product *
+{
+	margin-top:5px;
+}
+#main .product h2
+{
+	color:blue;
+}
+#main .product h3
+{
+	color:red;
+}
+#main .product h4
+{
+	text-decoration:line-through;
+}
+#main .product button
+{
+	padding:5px;
+}
+#main .product img
+{
+	height:100px;
+	max-width:100%;
+    transition:all 0.5s 0s linear;
+}
+#main .product:hover img
+{
+	border-radius:50%;
+	border:double 3px red;
+}
+/* Menu */
+#menu ul
+{
+	list-style-type:none;
+}
+#menu ul li
+{
+	float: left;
+    border-right: 1px dotted red;
+    padding: 9px 40px;
+	position:relative;
+}
+#menu ul li:last-child
+{
+	border:none;
+}
+
+#menu a
+{
+	text-decoration:none;
+	color:blue;
+	white-space:pre;
+	transition-property:all;
+	transition-duration:2s;
+}
+#menu a:hover
+{
+	text-decoration:underline;
+	color:red;
+}
+
+#menu > button
+{
+	display:none;
+	padding:5px;
+}
+
+#search
+{
+	padding-top:8px;
+	float:right;
+}
+
+#search input
+{
+	width:80px;
+	padding:2px;
+	transition:width 1s 0s linear;
+}
+#search input:focus
+{
+	width:150px;
+	border:solid red 1px;
+}
+
+#search button
+{
+	width:20px;
+	padding:2px;
+}
+
+#search input:focus + button
+{
+	border:solid red 1px;
+}
+
+/* Menu cap 2 */
+
+#menu ul ul
+{
+	background-color:#9FC;
+	position:absolute;
+	top:100%;
+	left:0;
+	display:none;
+}
+#menu ul ul li
+{
+	float:none;
+	border-right:none;
+	border-bottom:1px dotted #CCC;
+}
+
+#menu ul li:hover > ul
+{
+	display:block;
+	animation-name:test;
+	animation-duration:1s;
+}
+
+/* Menu cap 3+ */
+#menu ul ul ul
+{
+	background-color:#FF9;
+	top:0;
+	left:100%;
+}
+
+@font-face
+{
+	font-family:titeo;
+	src:url(font/sansation_light.woff);
+}
+@keyframes test
+{
+	from{transform:rotate(-20deg)}
+	to{transform:rotate(0deg)}
+}
+
+/* Responsive */
+@media screen and (max-width:1000px)
+{
+	#left
+	{
+		width:29%;
+	}
+	#main
+	{
+		width:70%;
+		margin:0px 0px 0px 1%;
+	}
+	#right
+	{
+		display:none;
+	}
+	#main .product
+	{
+		width:31.33%;
+		margin:1%;
+	}
+}
+@media screen and (max-width:768px)
+{
+	#left,#right
+	{
+		width:100%;
+		display:block;
+	}
+	#main
+	{
+		width:100%;
+		margin:0;
+	}
+	#main .product
+	{
+		width:48%;
+		margin:1%;
+	}
+	#menu button
+	{
+		display:inline;
+	}
+	#menu > ul
+	{
+		display:none;
+	}
+}
+@media screen and (max-width:480px)
+{
+	#main .product
+	{
+		width:99%;
+		margin:5px 0.5%;
+	}
+    #header .slogan{
+        font-size:14px;
+        position:static;
+    }
+    #header img{
+        max-width:100%;
+        height:auto;
+    }
+}
