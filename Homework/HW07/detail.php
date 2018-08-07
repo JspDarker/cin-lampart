@@ -44,26 +44,24 @@
     <div class="flex-main">
         <aside id="left">left</aside>
         <section id="main">
-            <?php if(isset($categoryById)): ?>
-                <?php if(array_key_exists('not_row',$categoryById)): ?>
-                    <?=$categoryById['not_row'];?>
-                <?php endif;?>
-            <?php endif;?>
-            <?php if(isset($product)):?>
-                <?php foreach (isset($categoryById) ? $categoryById: $product as $value):?>
-                    <div class="product">
-                        <h2><a href="detail.php?product=<?=$value['id']?>"><?=$value['name'];?></a></h2>
-                        <a href="detail.php?product=<?=$value['id']?>">
-                            <img src="image/product/<?=$value['url'];?>" alt="<?=$value['alt'];?>">
-                        </a>
-                        <h3><?php echo number_format($value['price']);?> VND</h3>
-                        <button>Mua</button>
-                    </div>
-                <?php endforeach;?>
-            <?php endif;?>
+            <?php if(isset($result_item)): ?>
+            <div class="single-product">
+                <div class="product">
+                    <h2><?=$result_item['pro_name'];?></h2>
+                    <img src="image/product/<?=$result_item['url_img'];?>" alt="<?=$result_item['alt_img'];?>">
+                    <h3><?=$result_item['pro_price'];?> VND </h3>
+
+                    <button>Mua</button>
+                </div>
+                <div class="info-product">
+
+                </div>
+            </div>
+            <?php endif; ?>
         </section>
         <aside id="right">right</aside>
     </div>
     <footer id="footer">Copyright © 2018 Lampart Co., Ltd. All Rights Reserved.</footer>
 </div>
 </body>
+</html>
