@@ -12,7 +12,7 @@ $conn->set_charset('utf8');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+echo 'Connect Oke';
 // select 1
 function getRows ($conn, $sql) {
     $res = $conn->query($sql);
@@ -32,7 +32,7 @@ $stmt = $conn->prepare("select `fs_category`.`id` as `id_cate`,
 `fs_category`.`name` as `name_cate`
 from fs_category where `department_id` = ?");
 
-
+$fa = fetch_assoc_stmt();
 
 // single query
 $once = "
