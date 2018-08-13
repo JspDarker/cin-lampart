@@ -42,7 +42,6 @@ if(isset($_GET['id_cate']))
     $cate = "AND fs_product.category_id = '{$_GET['id_cate']}'";
     $limit = 20;
     $bind_value = Product::getListingByCategory($order, $limit, $cate);
-
     $product_by_cate = $conn->loadMoreRows($bind_value);
 }
 

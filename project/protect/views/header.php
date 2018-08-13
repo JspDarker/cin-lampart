@@ -59,7 +59,7 @@
         <div class="clear"></div>
         <div class="navigation">
             <ul id="nav" class="dropdown dropdown-linear dropdown-columnar">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="inited.php">Home</a></li>
                 <li><a href="static.html">About Us</a></li>
                 <li class="dir"><a href="#">Department</a>
                     <ul class="bordergr big">
@@ -73,36 +73,7 @@
                             </li>
                         <?php endforeach?>
 
-                        <!--<li class="dir"><span class="colr navihead bold">Calvin Klein</span>
-                            <ul>
-                                <li><a href="categories.html">AK Anne Klein</a></li>
-                                <li><a href="categories.html">Alexander Christie</a></li>
-                                <li><a href="categories.html">Arbutus</a></li>
-                                <li><a href="categories.html">Armitron</a></li>
-                                <li><a href="categories.html">Body Glove</a></li>
-                                <li><a href="categories.html">Calvin Klein</a></li>
-                            </ul>
-                        </li>
-                        <li class="dir"><span class="colr navihead bold">Citizen</span>
-                            <ul>
-                                <li><a href="categories.html">AK Anne Klein</a></li>
-                                <li><a href="categories.html">Alexander Christie</a></li>
-                                <li><a href="categories.html">Arbutus</a></li>
-                                <li><a href="categories.html">Armitron</a></li>
-                                <li><a href="categories.html">Body Glove</a></li>
-                                <li><a href="categories.html">Calvin Klein</a></li>
-                            </ul>
-                        </li>
-                        <li class="dir"><span class="colr navihead bold">Calvin Klein</span>
-                            <ul>
-                                <li><a href="categories.html">AK Anne Klein</a></li>
-                                <li><a href="categories.html">Alexander Christie</a></li>
-                                <li><a href="categories.html">Arbutus</a></li>
-                                <li><a href="categories.html">Armitron</a></li>
-                                <li><a href="categories.html">Body Glove</a></li>
-                                <li><a href="categories.html">Calvin Klein</a></li>
-                            </ul>
-                        </li>-->
+
                     </ul>
                 </li>
                 <li><a href="login.html">BedSheets</a></li>
