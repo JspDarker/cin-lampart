@@ -132,7 +132,11 @@
 <script type="text/javascript" src="assets/bootstrap/jquery-ui.js"></script>
 <script>
     $(function() {
-        $('.datepicker').datepicker();
+        $('.datepicker').datepicker({
+            dateFormat: 'dd-mm-yy',//check change
+            changeMonth: true,
+            changeYear: true,
+        });
     })
 </script>
 </body>
