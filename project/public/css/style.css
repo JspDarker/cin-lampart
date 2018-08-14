@@ -283,11 +283,12 @@ ul.search li input.bar{
 ul.search li a.searchbtn{
 	width:106px;
 	height:19px;
-	padding:6px 0px 0px 28px;
+	padding:6px 0px 2px 30px;
 	background-image:url(../images/search_btn.gif);
 	background-repeat:no-repeat;
 	display:inline-block;
-	margin:5px 0px 0px 5px;
+	margin:2px 5px 2px 9px;
+	font-size: 10px;
 }
 ul.search li a.searchbtn:hover{
 	color:#000;

@@ -9,7 +9,7 @@
                 <ul>
                     <?php foreach ($pro_feature as $product):?>
                     <li>
-                        <a href="detail.html"><img src="public/images/product/<?=$product->url?>" alt="<?=$product->alt?>" ></a>
+                        <a href="?mod=detail&pro_id=<?=$product->id?>"><img src="public/images/product/<?=$product->url?>" alt="<?=$product->alt?>" ></a>
                         <h6 class="colr"><?=$product->name?></h6>
                         <p class="price bold">$<?php echo round((($product->price)/1000000),2)?></p>
                         <a href="cart.html" class="adcart">Add to Cart</a>
@@ -26,7 +26,7 @@
                 <?php $count=1; ?>
                 <?php foreach ($lists as $list):?>
                     <li<?php echo ($count % 4 == 0) ? " class='last'" : ''; $count++?>>
-                        <a itemid="<?=$list->id?>" href="detail.html" class="thumb"><img src="public/images/product/<?=$list->url?>" alt="<?=$list->alt?>" ></a>
+                        <a itemid="<?=$list->id?>" href="?mod=detail&pro_id=<?=$list->id?>" class="thumb"><img src="public/images/product/<?=$list->url?>" alt="<?=$list->alt?>" ></a>
                         <h6 class="colr"><?=$list->name?></h6>
                         <div class="stars">
                             <a href="#"><img src="public/images/star_green.gif" alt="" ></a>
@@ -41,7 +41,7 @@
                             <a href="#">Add to Compare</a>
                         </div>
                         <div class="cart_price">
-                            <a href="cart.html" class="adcart" itemid="<?=$list->id?>">Add to Cart</a>
+                            <a href="?mod=detail&pro_id=<?=$list->id?>" class="adcart" itemid="<?=$list->id?>">Add to Cart</a>
                             <p class="price">$<?php echo round((($list->price)/1000000),2)?></p>
                         </div>
                     </li>

@@ -22,7 +22,10 @@
     <script type="text/javascript" src="public/js/contentslider.js"></script>
     <script type="text/javascript" src="public/js/jquery.fancybox-1.3.1.js"></script>
     <script type="text/javascript" src="public/js/lightbox.js"></script>
-    <style>.high-light{color: #2aabd2!important; font-weight: bold}</style>
+    <style>
+        .high-light{color: #2aabd2!important; font-weight: bold!important; font-size: large}
+        .text-danger{color: red; font-size: small}
+    </style>
 </head>
 
 <body>
@@ -38,7 +41,7 @@
                 <li><a href="#">My Wishlist</a></li>
                 <li><a href="cart.html">My Cart</a></li>
                 <li><a href="#">Checkout</a></li>
-                <li class="last"><a href="login.html">Log In</a></li>
+                <li class="last"><a href="?mod=login">Log In</a></li>
             </ul>
             <ul class="network">
                 <li>Share with us:</li>
@@ -53,10 +56,16 @@
             <a href="index.html"><img src="public/images/logo.png" alt="" ></a>
             <h5 class="slogn">The best watches for all</h5>
         </div>
-        <ul class="search">
+        <form action="?mod=search_word" method="post">
+            <ul class="search">
+                <li><input name="search_product" type="text" id="searchBox" class="bar" ></li>
+                <li><button name="search_btn" type="submit"><a class="searchbtn">Search for Products</a></button></li>
+            </ul>
+        </form>
+        <!--<ul class="search">
             <li><input type="text" value="Search" id="searchBox" name="s" onblur="if(this.value == '') { this.value = 'Search'; }" onfocus="if(this.value == 'Search') { this.value = ''; }" class="bar" ></li>
             <li><a href="#" class="searchbtn">Search for Products</a></li>
-        </ul>
+        </ul>-->
         <div class="clear"></div>
         <div class="navigation">
             <ul id="nav" class="dropdown dropdown-linear dropdown-columnar">

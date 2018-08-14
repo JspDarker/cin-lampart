@@ -12,12 +12,13 @@
             <ul class="right">
                 <li class="text">
                     Sort by Position
-                    <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=isset($_GET['page'])? $_GET['page'] : 1 ?>&per_page=<?php echo $limit;?>&order=1" class="colr">Name </a>
-                    <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=isset($_GET['page'])? $_GET['page'] : 1 ?>&per_page=<?php echo $limit;?>&order=2" class="colr">Price</a>
+                    <a href="?mod=search_word&search_product=<?php echo $search_txt?>&p=<?=isset($_GET['p'])? $_GET['p'] : 1 ?>&per_p=<?php echo $limit;?>&order=1" class="colr">Name </a>
+                    <a href="?mod=search_word&search_product=<?php echo $search_txt?>&p=<?=isset($_GET['p'])? $_GET['p'] : 1 ?>&per_p=<?php echo $limit;?>&order=2" class="colr">Price</a>
                 </li>
                 <li class="text">Page
+                    <?php $page_number = ceil($total_pro/$limit);?>
                     <?php for($i = 1; $i <= $page_number ; $i++):?>
-                        <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=$i?>&per_page=<?php echo $limit;?>" class="colr<?php if($_GET['page'] == $i) echo' high-light';?>"><?=$i?></a>
+                        <a href="?mod=search_word&search_product=<?php echo $search_txt?>&p=<?=$i?>&per_p=<?php echo $limit;?>" class="colr<?php if($_GET['p'] == $i) echo' high-light';?>"><?=$i?></a>
                     <?php endfor;?>
                     <a href="#" class="colr">/ All</a>
                 </li>
