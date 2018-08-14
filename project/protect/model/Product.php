@@ -70,14 +70,22 @@ class Product extends Connection
         return $res;
     }
 
-    public static function getListingByCategory($order, $limit, $cate)
+    public static function getListingByCategory($order, $limit, $cate,$start)
     {
-        $sql = "SELECT fs_product.name AS pro_name,fs_product.id AS pro_id, fs_product.price AS pro_price,fs_product_img.url AS urlHinh, fs_product_img.alt AS img_alt,fs_product.view as `views`
+        $sql = "SELECT fs_product.name AS pro_name,fs_product.id AS pro_id,
+                        fs_product.price AS pro_price,fs_product_img.url AS urlHinh,
+                        fs_product_img.alt AS img_alt,fs_product.view as `views`
                      FROM fs_product 
                      JOIN fs_product_img ON fs_product.id=fs_product_img.product_id  
                      {$cate}
                       ORDER BY {$order}  DESC
-                     LIMIT 0,$limit";
+                     LIMIT {$start},{$limit}";
         return $sql;
+    }
+
+    public function countRows($id)
+    {
+        $sql = "select count(1) as `total` from fs_product where category_id = ?";
+        return $this->loadOneRow($sql,[$id]);
     }
 }

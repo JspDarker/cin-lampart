@@ -12,13 +12,13 @@
             <ul class="right">
                 <li class="text">
                     Sort by Position
-                    <a href="#" class="colr">Name </a>
-                    <a href="#" class="colr">Price</a>
+                    <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=$_GET['page']?>&per_page=<?php echo $limit;?>&order=1" class="colr">Name </a>
+                    <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=$_GET['page']?>&per_page=<?php echo $limit;?>&order=2" class="colr">Price</a>
                 </li>
                 <li class="text">Page
-                    <a href="#" class="colr">1</a>
-                    <a href="#" class="colr">2</a>
-                    <a href="#" class="colr">3</a>
+                    <?php for($i = 1; $i <= $page_number ; $i++):?>
+                        <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=$i?>&per_page=<?php echo $limit;?>" class="colr<?php if($_GET['page'] == $i) echo' high-light';?>"><?=$i?></a>
+                    <?php endfor;?>
                     <a href="#" class="colr">/ All</a>
                 </li>
             </ul>

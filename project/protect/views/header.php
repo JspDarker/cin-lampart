@@ -22,6 +22,7 @@
     <script type="text/javascript" src="public/js/contentslider.js"></script>
     <script type="text/javascript" src="public/js/jquery.fancybox-1.3.1.js"></script>
     <script type="text/javascript" src="public/js/lightbox.js"></script>
+    <style>.high-light{color: #2aabd2!important; font-weight: bold}</style>
 </head>
 
 <body>
