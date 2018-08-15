@@ -23,7 +23,7 @@ class Category extends Connection
                      FROM fs_product 
                      JOIN fs_product_img ON fs_product.id=fs_product_img.product_id  
                      {$category_id}
-                      ORDER BY {$order}  DESC
+                      ORDER BY {$order}
                      LIMIT {$start},{$limit}";
         return $sql;
     }

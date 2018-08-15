@@ -7,9 +7,11 @@
             <p class="left colr">4 Item(s)</p>
             <ul class="right">
                 <li class="text">
-                    Sort by Position
-                    <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=isset($_GET['page'])? $_GET['page'] : 1 ?>&per_page=<?php echo $limit;?>&order=1" class="colr">Name </a>
-                    <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=isset($_GET['page'])? $_GET['page'] : 1 ?>&per_page=<?php echo $limit;?>&order=2" class="colr">Price</a>
+                    Sort by Name
+                    <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=isset($_GET['page'])? $_GET['page'] : 1 ?>&per_page=<?php echo $limit;?>&order=1" class="colr">DESC</a>
+                    <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=isset($_GET['page'])? $_GET['page'] : 1 ?>&per_page=<?php echo $limit;?>&order=3" class="colr">ASC</a> Price
+                    <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=isset($_GET['page'])? $_GET['page'] : 1 ?>&per_page=<?php echo $limit;?>&order=2" class="colr">DESC</a>
+                    <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=isset($_GET['page'])? $_GET['page'] : 1 ?>&per_page=<?php echo $limit;?>&order=4" class="colr">ASC</a>
                 </li>
                 <li class="text">Page
                     <?php for($i = 1; $i <= $page_number ; $i++):?>

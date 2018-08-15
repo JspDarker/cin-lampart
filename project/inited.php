@@ -35,13 +35,19 @@ if($mod == 'listing')
         $per_page = isset($_GET['per_page']) ? (int)$_GET['per_page'] : $limit_items;
         $start = ($page > 1) ? ($page * $per_page) - $per_page : 0;
 
-        $order = "fs_product.view";
+        $order = "fs_product.view DESC";
         if(isset($_GET['order']))
         {
             if($_GET['order'] == 1) {
+                $order = "fs_product.name DESC";
+            }
+            if($_GET['order'] == 3) {
                 $order = "fs_product.name";
             }
             if($_GET['order'] == 2) {
+                $order = "fs_product.price DESC";
+            }
+            if($_GET['order'] == 4) {
                 $order = "fs_product.price";
             }
         }
@@ -251,6 +257,8 @@ if($mod == 'up_info') {
 }
 if($mod=='test') {
 
+
+    render($mod);
 }
 render('footer_update',['menus' => $hide]);
 
