@@ -15,7 +15,7 @@
                 </li>
                 <li class="text">Page
                     <?php for($i = 1; $i <= $page_number ; $i++):?>
-                        <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=$i?>&per_page=<?php echo $limit;?>" class="colr<?php if($_GET['page'] == $i) echo' high-light';?>"><?=$i?></a>
+                        <a href="?mod=listing&id_cate=<?=$_GET['id_cate']?>&page=<?=$i?>&per_page=<?php echo $limit;?>&order=<?=$_GET['order']?>" class="colr<?php if($_GET['page'] == $i) echo' high-light';?>"><?=$i?></a>
                     <?php endfor;?>
                     <a href="#" class="colr">/ All</a>
                 </li>
