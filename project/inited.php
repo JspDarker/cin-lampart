@@ -7,16 +7,24 @@ function render($view, $data = [])
      include "protect/views/{$view}.php";
  }
 
- $mod = isset($_GET['mod']) ?  $_GET['mod'] : 'home';
-
-
+$mod = isset($_GET['mod']) ? $_GET['mod'] : 'home';
 
 require_once 'protect/model/Department.php';
 $menu_department = new Department;
 $hide = $menu_department->get_menu();
 render('header',['menus' => $hide]);
-//==================================================
 
+//==================================================
+if($mod =='home') {
+
+    require_once 'protect/model/Product.php';
+    $conn = new Product;
+    $products_home = $conn->get_products_home();
+    //$menus = $conn->get_menu();
+    $product_feature = $conn->get_products_feature();
+
+    render($mod, ['lists' => $products_home,'pro_feature' => $product_feature]);
+}
 if($mod == 'listing')
 {
     if(isset($_GET['id_cate']))
@@ -194,7 +202,7 @@ if($mod == 'register'){
                     $pass = password_hash($pass,PASSWORD_DEFAULT);
                     $options = [$name,$email,$pass];
                     $insert = $conn->executeQuery($sql,$options);
-                    if($insert === false) {
+                    if($insert == false) {
                         echo "not insert";
                         $isOke = true;
                         //die;
@@ -241,19 +249,9 @@ if($mod == 'up_info') {
         render($mod,['user'=>$user]);
     }
 }
-
-if($mod== 'home') {
-
-    require_once 'protect/model/Product.php';
-    $conn = new Product;
-    $products_home = $conn->get_products_home();
-    //$menus = $conn->get_menu();
-    $product_feature = $conn->get_products_feature();
-
-    render($mod, ['lists' => $products_home,'pro_feature' => $product_feature]);
+if($mod=='test') {
 
 }
-//render('footer');
 render('footer_update',['menus' => $hide]);
 
 

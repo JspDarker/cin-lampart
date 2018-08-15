@@ -8,7 +8,7 @@ class Product extends Connection
         parent::__construct();
     }
 
-    public function get_products_home()
+    public function get_products_home()//TODO: fix group by img
     {
         $sql = $product_sql = "
             select f.`id`, f.name, f.price, f.`view`, img.url, img.alt
@@ -16,7 +16,7 @@ class Product extends Connection
             join fs_product_img img
             on f.id = img.product_id
             -- where f.price > 9000000 and f.active =1 group by img.url fix image repeat
-            where f.active =1 group by img.url
+            where f.active =1 group by img.id 
             order by f.price desc limit 0,20"
         ;
         return $this->loadMoreRows($sql);
