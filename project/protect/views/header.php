@@ -36,12 +36,18 @@
     <div id="masthead">
         <div class="secnd_navi">
             <ul class="links">
-                <li>Default welcome msg!</li>
+                <li>WELCOME <?php echo isset($_SESSION['name_user']) ? $_SESSION['name_user'] : ''?></li>
                 <li><a href="account.html">My Account</a></li>
                 <li><a href="#">My Wishlist</a></li>
                 <li><a href="cart.html">My Cart</a></li>
                 <li><a href="#">Checkout</a></li>
-                <li class="last"><a href="?mod=login">Log In</a></li>
+                <?php if(isset($_SESSION['name_user'])):?>
+                    <li ><a href="?mod=logout">Log Out</a></li>
+                    <li class="last"><a href="?mod=up_info">Update</a></li>
+                <?php else:;?>
+                    <li class=""><a href="?mod=login">Log In</a></li>
+                    <li class="last"><a href="?mod=register">Register</a></li>
+                <?php endif;?>
             </ul>
             <ul class="network">
                 <li>Share with us:</li>
@@ -56,12 +62,13 @@
             <a href="index.html"><img src="public/images/logo.png" alt="" ></a>
             <h5 class="slogn">The best watches for all</h5>
         </div>
-        <form action="?mod=search_word" method="post">
+        <form id="search_word" action="?mod=search_word" method="post">
             <ul class="search">
                 <li><input name="search_product" type="text" id="searchBox" class="bar" ></li>
-                <li><button name="search_btn" type="submit"><a class="searchbtn">Search for Products</a></button></li>
+                <li><button id="search_btn" name="search_btn" type="submit"><a class="searchbtn">Search for Products</a></button></li>
             </ul>
         </form>
+
         <!--<ul class="search">
             <li><input type="text" value="Search" id="searchBox" name="s" onblur="if(this.value == '') { this.value = 'Search'; }" onfocus="if(this.value == 'Search') { this.value = ''; }" class="bar" ></li>
             <li><a href="#" class="searchbtn">Search for Products</a></li>
@@ -82,8 +89,6 @@
                                 </ul>
                             </li>
                         <?php endforeach?>
-
-
                     </ul>
                 </li>
                 <li><a href="login.html">BedSheets</a></li>
@@ -141,3 +146,7 @@
     </div>-->
     <div class="clear"></div>
     <div class="content_sec">
+        <!-- Column2 Section -->
+        <div class="col2">
+            <div class="col2_top">&nbsp;</div>
+            <div class="col2_center">

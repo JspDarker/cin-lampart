@@ -1,6 +1,4 @@
-<div class="col2">
-    <div class="col2_top">&nbsp;</div>
-    <div class="col2_center">
+
         <h4 class="heading colr"><?=$product->name?></h4>
         <div class="prod_detail">
             <div class="big_thumb">
@@ -41,7 +39,7 @@
                 </div>
 
                 <div class="addtocart">
-                    <h4 class="left price colr bold">$<?php echo round((($product->price)/1000000),2)?></h4>
+                    <h4 class="left price colr bold"><?php echo number_format($product->price)?> Tr</h4>
                     <div class="clear"></div>
                     <ul class="margn addicons">
                         <li>
@@ -93,7 +91,7 @@
                         </div>
                         <div class="cart_price">
                             <a href="?mod=detail&pro_id=<?=$list->id?>" class="adcart" itemid="<?=$list->id?>">Add to Cart</a>
-                            <p class="price">$<?php echo round((($list->price)/1000000),2)?></p>
+                            <p class="price"><?php echo round((($list->price)/1000000),2)?> Tr</p>
                         </div>
                     </li>
                 <?php endforeach?>
@@ -112,4 +110,3 @@
     <div class="clear"></div>
     <div class="col2_botm">&nbsp;</div>
 </div>
-<?php include 'col_one.php'?>

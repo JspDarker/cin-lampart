@@ -1,8 +1,4 @@
-<!-- Column2 Section -->
 
-<div class="col2">
-    <div class="col2_top">&nbsp;</div>
-    <div class="col2_center">
         <h4 class="heading colr">Featured Products</h4>
         <div class="small_banner">
             <a href="#"><img src="public/images/small_banner.gif" alt="" ></a>
@@ -38,7 +34,7 @@
                 <?php $count=1; ?>
                 <?php foreach ($products as $list):?>
                     <li<?php echo ($count % 4 == 0) ? " class='last'" : ''; $count++?>>
-                        <a itemid="<?=$list->pro_id?>" href="detail.html" class="thumb"><img src="public/images/product/<?=$list->urlHinh?>" alt="<?=$list->img_alt?>" ></a>
+                        <a itemid="<?=$list->pro_id?>" href="?mod=detail&pro_id=<?=$list->pro_id?>" class="thumb"><img src="public/images/product/<?=$list->urlHinh?>" alt="<?=$list->img_alt?>" ></a>
                         <h6 class="colr"><?=$list->pro_name?></h6>
                         <div class="stars">
                             <a href="#"><img src="public/images/star_green.gif" alt="" ></a>
@@ -64,4 +60,3 @@
     <div class="clear"></div>
     <div class="col2_botm">&nbsp;</div>
 </div>
-<?php include 'col_one.php'?>

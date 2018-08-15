@@ -1,28 +1,15 @@
-<?php
-$err_email= $err_pass = '';
-    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['btn_login']))
-    {
-        //echo $email = $_POST['email'];
-        //echo $pass = $_POST['pass'];
-        $err_email = $email_err;
-    }
 
-?>
-
-<div class="col3">
-    <div class="col3_top">&nbsp;</div>
-    <div class="col3_center">
         <h2 class="heading colr">Login</h2>
         <div class="login">
             <div class="registrd">
                 <h3>Please Sign In</h3>
                 <p>If you have an account with us, please log in.</p>
 
-                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>?mod=login">
+                <form method="post" action="?mod=login">
                     <ul class="forms">
                         <li class="txt">Email Address <span class="req">*</span></li>
                         <li class="inputfield">
-                            <input type="text" name="email" class="bar" ><br>
+                            <input value="<?=$email?>" type="text" name="email" class="bar" ><br>
                             <span class="text-danger"><?=$err_email?></span>
                         </li>
                     </ul>
@@ -30,7 +17,7 @@ $err_email= $err_pass = '';
                         <li class="txt">Password <span class="req">*</span></li>
                         <li class="inputfield">
                             <input type="password" name="pass" class="bar" ><br>
-                            <span class="text-danger">this is error</span>
+                            <span class="text-danger"><?=$err_pass?></span>
                         </li>
                     </ul>
                     <ul class="forms">

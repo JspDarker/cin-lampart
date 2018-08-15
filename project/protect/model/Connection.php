@@ -12,7 +12,7 @@ class Connection
             $this->connect->exec("set names utf8");
             // set the PDO error mode to exception
             $this->connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "Connected successfully";
+            //echo "Connected successfully";
         }
         catch(PDOException $e)
         {

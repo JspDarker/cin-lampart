@@ -1,8 +1,4 @@
-<!-- Column2 Section -->
 
-<div class="col2">
-    <div class="col2_top">&nbsp;</div>
-    <div class="col2_center">
         <h4 class="heading colr">Featured Products</h4>
         <div class="small_banner">
             <a href="#"><img src="public/images/small_banner.gif" alt="" ></a>
@@ -65,4 +61,3 @@
     <div class="clear"></div>
     <div class="col2_botm">&nbsp;</div>
 </div>
-<?php include 'col_one.php'?>

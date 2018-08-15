@@ -260,7 +260,7 @@ ul.links li a:hover{
 ul.search {
 	float:right;
 	list-style:none;
-	width:425px;
+	width:430px;
 	height:35px;
 	background-image:url(../images/search.gif);
 	background-repeat:no-repeat;
@@ -282,12 +282,12 @@ ul.search li input.bar{
 }
 ul.search li a.searchbtn{
 	width:106px;
-	height:19px;
-	padding:6px 0px 2px 30px;
+	height:17px;
+	padding:6px 0px 2px 28px;
 	background-image:url(../images/search_btn.gif);
 	background-repeat:no-repeat;
 	display:inline-block;
-	margin:2px 5px 2px 9px;
+	margin:2px 5px 2px 8px;
 	font-size: 10px;
 }
 ul.search li a.searchbtn:hover{
@@ -1401,7 +1401,7 @@ a.viewprods {
 }
 a.prevsmall {
 	float:left;
-	margin:38px 8px 0px 8px;
+	/*margin:38px 8px 0px 8px;*/ /*TODO:fix image*/
 }
 a.nextsmall {
 	float:left;
